@@ -1,5 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
+import request from 'superagent'
+
+
+request.get("/api/specs").end((err, res)=>{
+   if(err) {
+       console.log(err)
+   } else {
+       console.log(res)
+   }
+
+});
 
 class App extends Component {
   render() {

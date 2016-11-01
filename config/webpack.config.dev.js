@@ -193,5 +193,13 @@ module.exports = {
     fs: 'empty',
     net: 'empty',
     tls: 'empty'
-  }
+  },
+    devServer: {
+        proxy: {
+            '/api': {
+                target: 'http://localhost:8081',
+                secure: false
+            }
+        }
+    }
 };
